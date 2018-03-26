@@ -22,7 +22,7 @@
     <img id="header" src="http://satoken.nkmr.io/img/header.jpg">
 
     <div id="content">
-        <div class="heading">活動履歴 2014</div>
+        <div class="heading">活動履歴 2015</div>
 
         <div class="achievement-list">
             <div class="activity-box">                
