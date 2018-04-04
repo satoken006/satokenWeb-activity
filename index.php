@@ -14,7 +14,6 @@
             <li><a href="http://satoken.nkmr.io/profile/">PROFILE</a></li>
             <li><a href="http://satoken.nkmr.io/research/">RESEARCH</a></li>
             <li><a href="http://satoken.nkmr.io/product/">PRODUCT</a></li>
-            <li><a href="http://satoken.nkmr.io/interest/">INTEREST</a></li>
             <li><a href="http://satoken.nkmr.io/activity/">ACTIVITY</a></li>
             <li><a href="http://satoken.nkmr.io/link/">LINK</a></li>
         </ul>
