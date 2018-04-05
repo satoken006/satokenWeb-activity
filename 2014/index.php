@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://satoken.nkmr.io/css/style.css">
-    <script src="http://satoken.nkmr.io/main.js"></script>
+    <script src="http://satoken.nkmr.io/activity/javascripts/main.js"></script>
     <title>活動履歴</title>
 </head>
 <body>
