@@ -1,44 +1,48 @@
 <?php
 
-function showActivities( $year ){
-    $date_start = $year ."-04-01";
-    $date_end = ($year+1) ."-03-31";
+function showActivities( $_connection, $_year ){
+
+    $date_start = $_year ."-04-01";
+    $date_end = ($_year+1) ."-03-31";
 
     $q = "SELECT *, DATE_FORMAT(date, '%y%m%d') FROM activity WHERE date >= '$date_start' AND date <= '$date_end' ORDER BY date DESC";
-    $r = mysql_query( $q );
+    // echo $q;
+    // $row = mysql_query( $q );
 
     $mode = $_GET["mode"];
 
-    while( $c = mysql_fetch_array( $r ) ){
+    foreach( $_connection->query( $q ) as $row ){
 
-        if( $c[7] == 0 && $mode != "admin" ){
+        if( $row[7] == 0 && $mode != "admin" ){
             continue;
         }
 
         $item  = "<div class='item'>";
 
-        $item .=    "<div class='item-margin' id='$c[8]'></div>";
+        $item .=    "<div class='item-margin' id='$row[8]'></div>";
 
         $item .=    "<div class='item-heading'>";
-        $item .=        "<img class='symbol' src='http://satoken.nkmr.io/img/activity/$c[2].png'>";
+        $item .=        "<img class='symbol' src='http://satoken.nkmr.io/img/activity/$row[2].png'>";
         $item .=        "<div class='achievement-heading'>";
-        $item .=            $c[3];
-        $item .=            "<div class='achievement-heading-date'>$c[4]</div>";
+        $item .=            $row[3];
+        $item .=            "<div class='achievement-heading-date'>$row[4]</div>";
         $item .=        "</div>";
         $item .=    "</div>";
 
         $item .=    "<div class='item-desc'>";
-        $item .=        $c[5];
+        $item .=        $row[5];
         $item .=    "</div>";
 
         $item .=    "<div class='item-thumbnail'>";
-        $item .=        "<img src='$c[6]'>";
+        $item .=        "<img src='$row[6]'>";
         $item .=    "</div>";
 
         $item .= "</div>";
 
         echo $item;
     }
+
+    $_connection = null;
 }
 
 ?>
