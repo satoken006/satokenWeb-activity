@@ -23,7 +23,7 @@ function showActivities( $_connection, $_year ){
         $item .=    "<div class='item-margin' id='$row[8]'></div>";
 
         $item .=    "<div class='item-heading'>";
-        $item .=        "<img class='symbol' src='http://satoken.nkmr.io/img/activity/$row[2].png'>";
+        $item .=        "<img class='symbol' src='https://satoken.nkmr.io/img/activity/$row[2].png'>";
         $item .=        "<div class='achievement-heading'>";
         $item .=            $row[3];
         $item .=            "<div class='achievement-heading-date'>$row[4]</div>";
