@@ -5,7 +5,7 @@ function showActivities( $_connection, $_year ){
     $date_start = $_year ."-04-01";
     $date_end = ($_year+1) ."-03-31";
 
-    $q = "SELECT *, DATE_FORMAT(date, '%y%m%d') as date_format FROM activity WHERE date >= '$date_start' AND date <= '$date_end' ORDER BY date DESC";
+    $q = "SELECT *, DATE_FORMAT(date, '%y%m%d') FROM activity WHERE date >= '$date_start' AND date <= '$date_end' ORDER BY date DESC";
 
     $mode = "";
     if( isset($_GET["mode"]) ){
