@@ -6,10 +6,11 @@ function showActivities( $_connection, $_year ){
     $date_end = ($_year+1) ."-03-31";
 
     $q = "SELECT *, DATE_FORMAT(date, '%y%m%d') FROM activity WHERE date >= '$date_start' AND date <= '$date_end' ORDER BY date DESC";
-    // echo $q;
-    // $row = mysql_query( $q );
 
-    $mode = $_GET["mode"];
+    $mode = "";
+    if( isset($_GET["mode"]) ){
+        $mode = $_GET["mode"];
+    }
 
     foreach( $_connection->query( $q ) as $row ){
 
