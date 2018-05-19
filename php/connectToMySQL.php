@@ -12,8 +12,7 @@ function showActivities( $_connection, $_year ){
         $mode = $_GET["mode"];
     }
 
-    foreach( $_connection->query( $q ) as $row ){
-        list($id, $date, $category, $title, $dates_str, $description, $thumbnail_url, $date_format) = $row;
+    foreach( $_connection->query( $q ) as list($id, $date, $category, $title, $dates_str, $description, $thumbnail_url, $date_format) ){
 
         if( $date_format == 0 && $mode != "admin" ){
             continue;
