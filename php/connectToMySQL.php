@@ -30,12 +30,12 @@ function showActivities( $_connection, $_year ){
         $item .=        "</div>";
         $item .=    "</div>";
 
-        $item .=    "<div class='item-desc'>";
-        $item .=        $description;
-        $item .=    "</div>";
-
         $item .=    "<div class='item-thumbnail'>";
         $item .=        "<img src='$thumbnail_url'>";
+        $item .=    "</div>";
+
+        $item .=    "<div class='item-desc'>";
+        $item .=        $description;
         $item .=    "</div>";
 
         $item .= "</div>";
